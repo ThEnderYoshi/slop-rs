@@ -1,5 +1,7 @@
 # SLOP-RS
 
+[![Rust](https://github.com/ThEnderYoshi/slop-rs/actions/workflows/rust.yml/badge.svg)](https://github.com/ThEnderYoshi/slop-rs/actions/workflows/rust.yml)
+
 This is the official Rust implementation of the SLOP language.
 
 Sans' Lovely Properties (SLOP) is a data storage language designed to be tiny,
