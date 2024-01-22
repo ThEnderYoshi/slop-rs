@@ -16,8 +16,6 @@
 //!         item 2
 //!         item 3
 //!     }";
-//!
-//! println!("{slop_str}");
 //! let slop = slop_str.parse::<Slop>().unwrap();
 //!
 //! assert_eq!(slop.get("some-string-kv"), Some(&"some value".into()));

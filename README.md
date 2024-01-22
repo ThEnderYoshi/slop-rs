@@ -24,10 +24,21 @@ use slop_rs::Slop;
 
 fn main() -> Result<(), Box<dyn Error>> {
     /// See also: Slop::new() and Slop::open()
-    let mut slop: Slop = "some-key=some value".parse()?;
-    println!("{:?}", slop.get("some-key"));
+    let slop_str = "\
+        some-key=some value
+        other-key{
+            value 1
+            value 2
+        }";
+    let mut slop: Slop = slop_str.parse()?;
 
-    let mut s = slop.get_string("some-key")?.to_owned();
+    println!("{:?}", slop.get("some-key"));
+    println!("{:?}", slop.get("other-key"));
+
+    let mut s = slop
+        .get_string("some-key")
+        .expect("expected a string kv")
+        .to_owned();
     s.push_str("!!!");
 
     slop.insert("some-key".to_string(), s)?;

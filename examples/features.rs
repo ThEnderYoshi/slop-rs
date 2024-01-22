@@ -41,7 +41,7 @@ fn parsed_slop() -> Result<(), Box<dyn Error>> {
     // ...then print it again.
     println!("`some-key` = `{:?}`", slop.get("some-key"));
 
-    // Let's also add a list KV.
+    // Let's add a list KV as well.
     // Also, since we know that the key is valid, we can use insert_unchecked()
     // instead of insert().
     slop.insert_unchecked("other-key".to_string(), vec!["value 1", "value 2"]);

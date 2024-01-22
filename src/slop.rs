@@ -22,17 +22,16 @@ use crate::{
 /// ## Examples
 ///
 /// ```
-/// use slop_rs::{Slop, SlopValue};
+/// use slop_rs::Slop;
 ///
-/// let slop_string = "\
+/// let slop_str = "\
 ///     some-key=some value
 ///     other-key{
 ///         other
 ///         value
 ///     }
 /// ";
-///
-/// let slop: Slop = slop_string.parse().unwrap();
+/// let slop: Slop = slop_str.parse().unwrap();
 ///
 /// assert_eq!(slop.get("some-key"), Some(&"some value".into()));
 /// assert_eq!(slop.get("other-key"), Some(&vec!["other", "value"].into()));
