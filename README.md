@@ -25,7 +25,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut slop: Slop = "some-key=some value".parse()?;
     println!("{:?}", slop.get("some-key"));
 
-    let mut s = slop.get_string("some-key").unwrap().to_owned();
+    let mut s = slop.get_string("some-key")?.to_owned();
     s.push_str("!!!");
 
     slop.insert("some-key".to_string(), s)?;
