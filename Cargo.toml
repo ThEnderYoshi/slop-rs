@@ -1,0 +1,15 @@
+[package]
+name = "slop-rs"
+version = "0.1.0"
+descriptions = "Official implementation of the SLOP data storage language"
+authors = ["ThEnderYoshi"]
+edition = "2021"
+readme = "README.md"
+license = "MIT"
+keywords = ["language", "storage", "slop"]
+categories = ["data-structures", "parser-implementations"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+thiserror = "1.0.56"

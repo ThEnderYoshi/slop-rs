@@ -1,0 +1,26 @@
+# Lines starting with `#` are comments
+# Any leading (but not trailing) whitespace in lines is ignored.
+# A singular trailing carriage return (\r) is also igonred, if it is present.
+
+# This is a string key-value. (AKA string KV)
+some-key=some value # This is NOT a comment, it is part of the value.
+
+# This is a list KV. Each line is an item.
+list-kv{
+    item 1
+    item 2
+    item 3
+    # This is NOT a comment, every line (even empty ones) between the brackets
+    # are treated as items.
+Indentation is optional.
+List KVs cannot be nested.
+}
+
+# This is how empty list KVs look:
+empty-list-kv{
+}
+
+# This is invalid:
+#empty-list-kv{}
+
+# Keys can contain any character except for `=`, `{` and newlines.
